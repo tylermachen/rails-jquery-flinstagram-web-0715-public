@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FLATstagram</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+  <%= analytics_init if Rails.env.production? %>
+</head>
+<body>
+
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+      <div class="logo text-center">
+        <%= image_tag("flinstagram.png", width: "200") %>
+      </div>
+    </div>
+  </nav>
+
+  <%= yield %>
+
+  <footer class="text-center">
+    <h4>Made with ♡ at <%= link_to "The Flatiron School", "http://flatironschool.com" %></h4>
+  </footer>
+
+</body>
+</html>

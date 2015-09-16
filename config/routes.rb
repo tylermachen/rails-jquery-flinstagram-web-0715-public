@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'pictures#index'
   post '/picture/:id/like' => 'pictures#like', as: :like
+  get  '/picture/:id' => 'pictures#show'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
